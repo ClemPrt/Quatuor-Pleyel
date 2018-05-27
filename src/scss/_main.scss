@@ -1,0 +1,204 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+/*header*/
+.header {
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-image: url("./../images/QuatuorPleyel.png");
+    height: 100%;
+    /*Titre Quatuor Pleyel*/
+    h4 {
+        font-family: $sans-serif;
+        font-size: 12px;
+        color: $primary-color;
+        margin: 0;
+        padding: 2%;
+    }
+    .title {
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%; 
+        width:100%;
+        h1 {
+            color: $primary-color;
+            font-size: 4em;
+            margin: 0;
+
+        }
+    }
+}
+/*Biographie*/
+.intro_bio {
+
+    font-family: $sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.5;
+    .text {
+        .intro_bio_text {
+            width: 85%;
+        }
+        
+    
+        h2 {
+            font-family: $serif;
+            font-size: 28px;
+        }
+        .more {
+            color: $sixth-color;
+            text-decoration: none;
+        }
+    }
+    /*Photo gauche*/
+    .intro_bio_pic {
+        margin: 8%;
+        width: 15%;
+    }
+}
+/*extraits audios, vidéos, photos*/
+.audio {
+    display:flex;
+    font-size: 2em;
+    /*extraits audios, vidéos, photos*/
+    h3 {
+        margin-left: 10%;
+    }
+    /*Vignette*/
+    img {
+        width: 50%;
+        margin-left: 10%;
+        margin-bottom: 20%;
+    }
+    /*Bouton regarder/écouter*/
+    .button {
+        text-decoration: none;
+        text-transform: uppercase;
+        background: $primary-color;
+        padding: 3% 10%;
+        font-size: 0.5em;
+    }
+    /*Premier bloc*/
+    .audio_div1 {
+        background: $second-color;
+        color: $primary-color;
+
+    }
+    /*Deuxième bloc*/
+    .audio_div2 {
+        background:$third-color;
+    }
+    /*Troisième bloc*/
+    .audio_div3 {
+        background:$fourth-color;
+    }
+}
+/*Programmation prochain concert*/
+.concert {
+    text-align: center;
+    margin: 8%; 
+    font-size: 2em;
+}
+
+/* RESPONSIVE */
+@media screen and (min-width:720px) and (max-width: 960px) {
+    .header {
+        height: 85%;
+        h4 {
+            font-size: 10px;
+        }
+        .title{
+            h1{
+                font-size: 3em;
+            }
+        }
+    }
+    .audio {
+        font-size: 1.7em;
+    }
+  }
+
+  @media screen and (min-width:480px) and (max-width: 720px) {
+    .header {
+        height: 70%;
+        h4 {
+            font-size: 7px;
+            padding: 1%;
+        }
+        .title {
+            h1 {
+                font-size: 2em;
+            }
+        }
+    }
+    .intro_bio {
+        display: block;
+        text-align: center;
+        .text {
+            .intro_bio_text {
+                font-size: 12px;
+                line-height: 1.5;
+                width: 100%;
+            }
+            .more {
+                font-size: 12px;
+            }
+            h2 {
+                font-size: 16px;
+            }
+        }
+        /*Photo gauche*/
+        .intro_bio_pic {
+            display: none;
+        }
+    }
+    .audio {
+
+        font-size: 1.5em;
+    }
+  }
+
+  @media screen and (min-width:320px) and (max-width: 480px) {
+    .header {
+        height: 60%;
+        h4 {
+            font-size: 6px;
+            padding: 1%;
+        }
+        .title {
+            h1 {
+                font-size: 1.5em;
+            }
+        }
+    }
+    .intro_bio {
+        display: block;
+        text-align: center;
+        .text {
+            h2 {
+                font-size: 14px;
+            }
+            .intro_bio_text {
+                font-size: 10px;
+                line-height: 1.4;
+                width:100%;
+            }
+            .more {
+                font-size: 10px;
+            }
+        }
+        /*Photo gauche*/
+        .intro_bio_pic {
+            display: none;
+        }
+    }
+    .audio {
+        display: block;
+        font-size: 1em;
+        text-align: center;
+    }
+  }

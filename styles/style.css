@@ -1,0 +1,153 @@
+@charset "UTF-8";
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0; }
+
+/*header*/
+.header {
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-image: url("./../images/QuatuorPleyel.png");
+  height: 100%;
+  /*Titre Quatuor Pleyel*/ }
+  .header h4 {
+    font-family: "Roboto", sans-serif;
+    font-size: 12px;
+    color: #FAFAFA;
+    margin: 0;
+    padding: 2%; }
+  .header .title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%; }
+    .header .title h1 {
+      color: #FAFAFA;
+      font-size: 4em;
+      margin: 0; }
+
+/*Biographie*/
+.intro_bio {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.5;
+  /*Photo gauche*/ }
+  .intro_bio .text .intro_bio_text {
+    width: 85%; }
+  .intro_bio .text h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 28px; }
+  .intro_bio .text .more {
+    color: #ffbd4f;
+    text-decoration: none; }
+  .intro_bio .intro_bio_pic {
+    margin: 8%;
+    width: 15%; }
+
+/*extraits audios, vidéos, photos*/
+.audio {
+  display: flex;
+  font-size: 2em;
+  /*extraits audios, vidéos, photos*/
+  /*Vignette*/
+  /*Bouton regarder/écouter*/
+  /*Premier bloc*/
+  /*Deuxième bloc*/
+  /*Troisième bloc*/ }
+  .audio h3 {
+    margin-left: 10%; }
+  .audio img {
+    width: 50%;
+    margin-left: 10%;
+    margin-bottom: 20%; }
+  .audio .button {
+    text-decoration: none;
+    text-transform: uppercase;
+    background: #FAFAFA;
+    padding: 3% 10%;
+    font-size: 0.5em; }
+  .audio .audio_div1 {
+    background: #343434;
+    color: #FAFAFA; }
+  .audio .audio_div2 {
+    background: #F3f3f3; }
+  .audio .audio_div3 {
+    background: #b8b8b8; }
+
+/*Programmation prochain concert*/
+.concert {
+  text-align: center;
+  margin: 8%;
+  font-size: 2em; }
+
+/* RESPONSIVE */
+@media screen and (min-width: 720px) and (max-width: 960px) {
+  .header {
+    height: 85%; }
+    .header h4 {
+      font-size: 10px; }
+    .header .title h1 {
+      font-size: 3em; }
+
+  .audio {
+    font-size: 1.7em; } }
+@media screen and (min-width: 480px) and (max-width: 720px) {
+  .header {
+    height: 70%; }
+    .header h4 {
+      font-size: 7px;
+      padding: 1%; }
+    .header .title h1 {
+      font-size: 2em; }
+
+  .intro_bio {
+    display: block;
+    text-align: center;
+    /*Photo gauche*/ }
+    .intro_bio .text .intro_bio_text {
+      font-size: 12px;
+      line-height: 1.5;
+      width: 100%; }
+    .intro_bio .text .more {
+      font-size: 12px; }
+    .intro_bio .text h2 {
+      font-size: 16px; }
+    .intro_bio .intro_bio_pic {
+      display: none; }
+
+  .audio {
+    font-size: 1.5em; } }
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .header {
+    height: 60%; }
+    .header h4 {
+      font-size: 6px;
+      padding: 1%; }
+    .header .title h1 {
+      font-size: 1.5em; }
+
+  .intro_bio {
+    display: block;
+    text-align: center;
+    /*Photo gauche*/ }
+    .intro_bio .text h2 {
+      font-size: 14px; }
+    .intro_bio .text .intro_bio_text {
+      font-size: 10px;
+      line-height: 1.4;
+      width: 100%; }
+    .intro_bio .text .more {
+      font-size: 10px; }
+    .intro_bio .intro_bio_pic {
+      display: none; }
+
+  .audio {
+    display: block;
+    font-size: 1em;
+    text-align: center; } }
+
+/*# sourceMappingURL=style.css.map */
