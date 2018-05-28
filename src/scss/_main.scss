@@ -12,52 +12,118 @@ html, body {
     /*Titre Quatuor Pleyel*/
     h4 {
         font-family: $sans-serif;
-        font-size: 12px;
+        font-size: 18px;
         color: $primary-color;
         margin: 0;
         padding: 2%;
     }
     .title {
-        display:flex;
-        align-items: center;
-        justify-content: center;
-        height: 100%; 
-        width:100%;
+        text-align: center;
+        margin-top: 15%;
+        position: relative;
+
         h1 {
             color: $primary-color;
             font-size: 4em;
             margin: 0;
 
         }
+
+        .title__scroll{
+            width: 2px;
+            height: 55px;
+            position: absolute;
+            left: 50%;
+            margin-top: 20%;
+            bottom: auto;
+            transform: translateX(-50%);
+            z-index: 1000;
+            overflow: hidden;
+
+            .scroll__line{
+                position: relative;
+                width: 100%;
+                height: 55px;
+            }
+
+            .scroll__line::before{
+                content: '';
+                display: block;
+                width: 2px;
+                height: 55px;
+                position: absolute;
+                left: 0;
+                top: 0;
+                background: white;
+                animation: scroll 2s cubic-bezier(.165,.84,.44,1) infinite;
+
+            }
+        }
+
     }
 }
 /*Biographie*/
-.intro_bio {
-
-    font-family: $sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    line-height: 1.5;
-    .text {
-        .intro_bio_text {
-            width: 85%;
-        }
-        
-    
-        h2 {
-            font-family: $serif;
-            font-size: 28px;
-        }
-        .more {
-            color: $sixth-color;
-            text-decoration: none;
-        }
+.biography {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	position: relative;
+	z-index: 1;
+}
+img {
+    height: 60%;
+    width: auto;
+}
+.biography_imgBox {
+    margin: 100px 100px 0 100px;
+	position: relative;
+	
+}
+.biography_imgBox:before {
+	content: '';
+	background: #888;
+	width: 100%;
+	height: 60%;
+	position: absolute;
+	top: -30px;
+	right: -30px;
+	z-index: -1;
+	
+}
+.biography_imgBox:after {
+	content: '';
+	background: #444;
+	width: 100%;
+	height: 60%;
+	position: absolute;
+    bottom: 230px;
+	left: -25px;
+	z-index: -1;
+	
+}
+.biography_content {
+	padding: 25px;
+    text-align: justify;
+    width: 60%;
+    #text_ {
+        font-family: $serif;
+        font-size: 32px;
+        margin-top:5%;
     }
-    /*Photo gauche*/
-    .intro_bio_pic {
-        margin: 8%;
-        width: 15%;
+    .biography_content_text {
+        line-height: 1.5;
+        font-family: $sans-serif;
+    }
+    #more {
+        background: $sixth-color;
+        color: $primary-color;
+        font-family: $sans-serif;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 15px 40px;
+        font-size: 14px;
+        margin-top: 5%;
+        position: absolute;
     }
 }
 /*extraits audios, vidéos, photos*/
@@ -83,17 +149,17 @@ html, body {
         font-size: 0.5em;
     }
     /*Premier bloc*/
-    .audio_div1 {
+    .audio_photos {
         background: $second-color;
         color: $primary-color;
 
     }
     /*Deuxième bloc*/
-    .audio_div2 {
+    .audio_audios {
         background:$third-color;
     }
     /*Troisième bloc*/
-    .audio_div3 {
+    .audio_videos {
         background:$fourth-color;
     }
 }
@@ -107,98 +173,104 @@ html, body {
 /* RESPONSIVE */
 @media screen and (min-width:720px) and (max-width: 960px) {
     .header {
-        height: 85%;
-        h4 {
-            font-size: 10px;
+        height: 80%;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        .title {
+            font-size: 0.8em;
         }
-        .title{
-            h1{
-                font-size: 3em;
+    }
+    .biography {
+        .biography_imgBox {
+            display: none;
+        }
+        .biography_content {
+            width: 100%;
+            text-align: center;   
+            #text_ {
+                font-size: 26px;
+            }
+            .biography_content_text {
+                line-height: 1.5;
+            }
+            #more {
+                font-size: 12px;
             }
         }
     }
-    .audio {
-        font-size: 1.7em;
-    }
   }
+  
 
   @media screen and (min-width:480px) and (max-width: 720px) {
     .header {
-        height: 70%;
-        h4 {
-            font-size: 7px;
-            padding: 1%;
-        }
+        height: 60%;
+        background-repeat: no-repeat;
+        background-size: 100%;
         .title {
-            h1 {
-                font-size: 2em;
-            }
+            font-size: 0.7em;
         }
     }
-    .intro_bio {
-        display: block;
-        text-align: center;
-        .text {
-            .intro_bio_text {
-                font-size: 12px;
-                line-height: 1.5;
-                width: 100%;
-            }
-            .more {
-                font-size: 12px;
-            }
-            h2 {
-                font-size: 16px;
-            }
-        }
-        /*Photo gauche*/
-        .intro_bio_pic {
+    .biography {
+        .biography_imgBox {
             display: none;
+        }
+        .biography_content {
+            width: 100%;
+            text-align: center;   
+            #text_ {
+                font-size: 22px;
+            }
+            .biography_content_text {
+                line-height: 1.5;
+            }
+            #more {
+                font-size: 10px;
+            }
         }
     }
     .audio {
-
+        display: block;
         font-size: 1.5em;
+        h3 {
+            padding: 15px;
+        }
     }
   }
+  
 
   @media screen and (min-width:320px) and (max-width: 480px) {
     .header {
-        height: 60%;
-        h4 {
-            font-size: 6px;
-            padding: 1%;
-        }
+        height: 40%;
+        background-repeat: no-repeat;
+        background-size: 100%;
         .title {
-            h1 {
-                font-size: 1.5em;
-            }
+            font-size: 0.5em;
         }
     }
-    .intro_bio {
-        display: block;
-        text-align: center;
-        .text {
-            h2 {
-                font-size: 14px;
-            }
-            .intro_bio_text {
-                font-size: 10px;
-                line-height: 1.4;
-                width:100%;
-            }
-            .more {
-                font-size: 10px;
-            }
-        }
-        /*Photo gauche*/
-        .intro_bio_pic {
+    .biography {
+        .biography_imgBox {
             display: none;
+        }
+        .biography_content {
+            width: 100%;
+            text-align: center;   
+            #text_ {
+                font-size: 18px;
+            }
+            .biography_content_text {
+                line-height: 1.5;
+            }
+            #more {
+                font-size: 10px;
+            }
         }
     }
     .audio {
         display: block;
-        font-size: 1em;
-        text-align: center;
+        font-size: 1.5em;
+        h3 {
+            padding: 15px;
+        }
     }
   }
+  
