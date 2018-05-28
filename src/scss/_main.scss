@@ -180,18 +180,24 @@ img {
         transform-origin: 50% 50%;
         margin-left: auto;
         margin-right: auto;
-    }
+        position: relative;
+    
     .next_date {
+
         font-size: 36px;
+        width:100px;
+        height:100px;
         z-index: 1;
+        left: 50%;
         text-align: center;
-        transform: rotate(-45deg);
+        transform: rotate(-45deg) translateY(-50%) translate(-50%, -50%);
+        position: absolute;
         span {
             font-size: 42px;
             font-weight: bold;
         }
     }
-
+    }
 /* RESPONSIVE */
 @media screen and (min-width:720px) and (max-width: 960px) {
     .header {
