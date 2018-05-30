@@ -7,6 +7,7 @@ html, body {
 .header {
     background-repeat: no-repeat;
     background-size: 100%;
+    background-position: 50% 50%;
     background-image: url("./../images/QuatuorPleyel.png");
     height: 100%;
     /*Titre Quatuor Pleyel*/
@@ -20,29 +21,37 @@ html, body {
     .title {
         text-align: center;
         margin-top: 15%;
-        position: relative;
 
         h1 {
+            font-family: $serif;
             color: $primary-color;
             font-size: 4em;
             margin: 0;
 
         }
 
-        .title__scroll{
-            width: 2px;
-            height: 55px;
+        .title__scroll {
+            width: 50px;
             position: absolute;
             left: 50%;
             margin-top: 20%;
-            bottom: auto;
+            bottom: 50px;
             transform: translateX(-50%);
             z-index: 1000;
             overflow: hidden;
 
+            span {
+                color: white;
+                margin-bottom: 10px;
+                font-size: 17px;
+                font-family: "Roboto", sans-serif;
+                font-weight: 550;
+            }
             .scroll__line{
                 position: relative;
-                width: 100%;
+                margin: auto;
+                margin-top: 10px;
+                width: 2px;
                 height: 55px;
             }
 
@@ -297,7 +306,7 @@ img {
     .contact {
         width: 100%;
         background:$fourth-color;
-        height: 20%;
+        height: 100px;
         text-align: center;
         display: flex;
         .contact_us {
