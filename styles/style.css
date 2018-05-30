@@ -58,6 +58,11 @@ html, body {
         background: white;
         animation: scroll 2s cubic-bezier(0.165, 0.84, 0.44, 1) infinite; }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px; }
+
 /*Biographie*/
 .biography {
   width: 100%;
@@ -121,17 +126,18 @@ img {
     margin-top: 5%;
     position: absolute; }
 
-/*extraits audios, vidéos, photos*/
+/*extraits audios, vid├®os, photos*/
 .audio {
   display: flex;
   font-size: 1.5em;
   height: 500px;
-  /*extraits audios, vidéos, photos*/
+  margin-top: 50px;
+  /*extraits audios, vid├®os, photos*/
   /*Vignette*/
-  /*Bouton regarder/écouter*/
+  /*Bouton regarder/├®couter*/
   /*Premier bloc*/
-  /*Deuxième bloc*/
-  /*Troisième bloc*/ }
+  /*Deuxi├¿me bloc*/
+  /*Troisi├¿me bloc*/ }
   .audio h3 {
     margin-left: 10%;
     font-family: "Roboto", sans-serif;
@@ -176,71 +182,71 @@ img {
     flex-direction: column; }
 
 /*Programmation prochain concert*/
-.next_concert {
-  position: relative; }
-  .next_concert .concert {
-    text-align: center;
-    margin: 5%;
-    font-size: 2em; }
-  .next_concert hr {
-    width: 35%;
-    height: 2px;
-    left: 65%;
-    top: 40%;
-    position: absolute; }
-
-/*Carré + date*/
-.okokok {
-  display: flex; }
-
-.square {
-  width: 150px;
-  height: 150px;
-  background: none;
-  border: 3px solid #ffbd4f;
-  transform-origin: 50% 50%;
-  transform: rotate(45deg);
-  margin: auto;
-  margin-bottom: 2%; }
-  .square .next_date {
-    font-size: 28px;
+/*Carr├® + date*/
+.concert-container {
+  width: 100%; }
+  .concert-container .next_concert {
+    position: relative; }
+    .concert-container .next_concert .concert {
+      text-align: center;
+      margin: 5%;
+      font-size: 2em; }
+      .concert-container .next_concert .concert span {
+        background: white; }
+    .concert-container .next_concert hr {
+      width: 50%;
+      height: 2px;
+      right: 0;
+      top: 40%;
+      position: absolute;
+      z-index: -1; }
+  .concert-container .okokok {
+    display: flex; }
+  .concert-container .square {
     width: 150px;
     height: 150px;
-    z-index: 1;
-    text-align: center;
-    display: flex;
-    margin: auto;
+    background: none;
+    border: 3px solid #ffbd4f;
     transform-origin: 50% 50%;
-    transform: rotate(-45deg);
-    font-family: "Roboto", sans-serif; }
-    .square .next_date p {
-      margin: auto; }
-    .square .next_date span {
-      font-size: 44px;
-      font-weight: bold; }
-
-.lieu {
-  padding-top: 1%;
-  font-size: 18px;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  font-weight: 600; }
-
-hr {
-  height: 30px;
-  width: 2px;
-  border: none;
-  background: #ffbd4f; }
-
-.next_date_infos .infos {
-  font-size: 14px;
-  font-family: "Roboto", sans-serif;
-  width: 50%;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 5%; }
+    transform: rotate(45deg);
+    margin: auto;
+    margin-bottom: 2%; }
+    .concert-container .square .next_date {
+      font-size: 28px;
+      width: 150px;
+      height: 150px;
+      z-index: 1;
+      text-align: center;
+      display: flex;
+      margin: auto;
+      transform-origin: 50% 50%;
+      transform: rotate(-45deg);
+      font-family: "Roboto", sans-serif; }
+      .concert-container .square .next_date p {
+        margin: auto; }
+      .concert-container .square .next_date span {
+        font-size: 44px;
+        font-weight: bold; }
+  .concert-container .lieu {
+    padding-top: 1%;
+    font-size: 18px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 600; }
+  .concert-container hr {
+    height: 30px;
+    width: 2px;
+    border: none;
+    background: #ffbd4f; }
+  .concert-container .next_date_infos .infos {
+    font-size: 14px;
+    font-family: "Roboto", sans-serif;
+    width: 50%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5%; }
 
 /*CONTACT*/
 .contact {
@@ -340,10 +346,98 @@ hr {
     .biography .biography_content #more {
       font-size: 10px; }
 
+  /*extraits audios, vid├®os, photos*/
   .audio {
-    display: block;
-    font-size: 1.5em; }
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5em;
+    margin-top: 50px;
+    height: 1600px;
+    /*extraits audios, vid├®os, photos*/
+    /*Premier bloc*/
+    /*Deuxi├¿me bloc*/
+    /*Troisi├¿me bloc*/ }
     .audio h3 {
-      padding: 15px; } }
+      padding: 15px; }
+    .audio .audio_photos {
+      background: #343434;
+      display: flex;
+      flex-direction: column;
+      height: 450px; }
+    .audio .audio_audios {
+      background: #F3f3f3;
+      display: flex;
+      flex-direction: column;
+      height: 450px; }
+    .audio .audio_videos {
+      background: #b8b8b8;
+      display: flex;
+      flex-direction: column;
+      height: 450px; }
+
+  .concert-container {
+    width: 100%; }
+    .concert-container .next_concert {
+      position: relative; }
+      .concert-container .next_concert .concert {
+        text-align: center;
+        margin: 5%;
+        font-size: 2em; }
+        .concert-container .next_concert .concert span {
+          background: white; }
+      .concert-container .next_concert hr {
+        width: 50%;
+        height: 2px;
+        right: 0;
+        top: 40%;
+        position: absolute;
+        z-index: -1; }
+    .concert-container .okokok {
+      display: flex; }
+    .concert-container .square {
+      width: 150px;
+      height: 150px;
+      background: none;
+      border: 3px solid #ffbd4f;
+      transform-origin: 50% 50%;
+      transform: rotate(45deg);
+      margin: auto;
+      margin-bottom: 2%; }
+      .concert-container .square .next_date {
+        font-size: 28px;
+        width: 150px;
+        height: 150px;
+        z-index: 1;
+        text-align: center;
+        display: flex;
+        margin: auto;
+        transform-origin: 50% 50%;
+        transform: rotate(-45deg);
+        font-family: "Roboto", sans-serif; }
+        .concert-container .square .next_date p {
+          margin: auto; }
+        .concert-container .square .next_date span {
+          font-size: 44px;
+          font-weight: bold; }
+    .concert-container .lieu {
+      padding-top: 1%;
+      font-size: 18px;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+      font-weight: 600; }
+    .concert-container hr {
+      height: 30px;
+      width: 2px;
+      border: none;
+      background: #ffbd4f; }
+    .concert-container .next_date_infos .infos {
+      font-size: 14px;
+      font-family: "Roboto", sans-serif;
+      width: 50%;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 5%; } }
 
 /*# sourceMappingURL=style.css.map */
